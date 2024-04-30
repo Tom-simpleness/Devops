@@ -50,3 +50,13 @@ docker volume ls
 Supprimez tous vos volumes :
 
 docker volume rm $(docker volume ls -q)
+
+#Evaluation
+help.datascientest.com. 
+
+Sur votre machine virtuelle, rendez vous dans le dossier parent au dossier exam_NOM, puis créez une archive sans oubliez l'extension .tar :
+
+tar -cvf exam_NOM.tar exam_NOM
+Sur votre machine PERSONNELLE, téléchargez le fichier exam_NOM.tar qui se trouve sur votre machine virtuelle avec la commande suivante:
+
+scp -i "<chemin_du_dossier_parent_à_la_clé_SSH>/data_enginering_machine.pem" ubuntu@IP_VM:<chemin_du_dossier_parent_à_l'archive>/exam_NOM.tar .
